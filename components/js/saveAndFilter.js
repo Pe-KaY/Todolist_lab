@@ -87,7 +87,7 @@ const saveAndFilter = () => {
         inProgress[index].completed = false
         console.log(inProgress[index])
       }
-      displayTodo("all")
+      displayTodo("inprogress")
 
       taskexist = null
 
@@ -109,7 +109,8 @@ const saveAndFilter = () => {
     })
 
     // displays todolist
-    displayTodo("all")
+    filterBtn.value = "inprogress"
+    displayTodo("inprogress")
   }
 
   //  marked/completed todo  function
@@ -130,8 +131,9 @@ const saveAndFilter = () => {
   const deleteTodo = (taskid) => {
     const taskToDelete = parseInt(taskid)
     inProgress = inProgress.filter(({ id }) => id !== taskToDelete)
-    // display todolist
-    displayTodo("all")
+    // display todolist at current filter
+    const currentFilter = filterBtn.value
+    displayTodo(currentFilter)
   }
 
   // filter todolist function
