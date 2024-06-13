@@ -82,10 +82,10 @@ const saveAndFilter = () => {
 
       if (
         inProgress[index].date !== taskexist.date ||
-        inProgress[index].title !== taskexist.title ||
-        inProgress[index].description !== taskexist.description
+        inProgress[index].title !== taskexist.title
       ) {
         inProgress[index].completed = false
+        console.log(inProgress[index])
       }
       displayTodo("all")
 
@@ -114,6 +114,9 @@ const saveAndFilter = () => {
 
   //  marked/completed todo  function
   const completedTodo = (taskid) => {
+    if (filterBtn.value === "completed") {
+      return
+    }
     const completedTaskId = parseInt(taskid)
     const completedTask = inProgress.findIndex(
       ({ id }) => id === completedTaskId

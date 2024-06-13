@@ -7,7 +7,7 @@ import "./components/styles/modal.css"
 
 import addTodoBtn from "./components/js/addTodoBtn"
 import closeTodoMenu from "./components/js/closeTodoMenu"
-import saveAndFilter from "./components/js/saveTodo"
+import saveAndFilter from "./components/js/saveAndFilter"
 
 // invoke functions
 addTodoBtn()
