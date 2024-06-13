@@ -1,0 +1,25 @@
+.todo__input {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.todo__input > input {
+  display: inline-block;
+  width: 50%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.todo__input > button {
+  display: inline-block;
+  width: 30%;
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+#filter {
+  font-size: 1rem;
+  padding: 1rem;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b1d08ee4bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDo</title>
+  </head>
+  <body>
+    <div class="Todocontainer">
+      <div class="todo__input">
+        <button id="addtodo">Add ToDo</button>
+        <select id="filter">
+          <option value="completed">completed</option>
+          <option value="sortold">In progress(sort old)</option>
+          <option value="inprogress">In Progress(sort new)</option>
+        </select>
+      </div>
+      <div class="todo__list">
+        <div>
+          <div class="title">
+            <h1>GO TO The GYM TODAY</h1>
+            <p>i will go and workout today to do some weight</p>
+            <p><span class="duedate">Date Due:</span> 12th March</p>
+          </div>
+          <span>
+            <button>Done</button>
+            <button>Update</button>
+            <button>Delete</button>
+          </span>
+        </div>
+      </div>
+
+      <!--Modal starts here  -->
+      <div id="modalmenu" class="modal hide">
+        <form>
+          <i class="fa-regular fa-rectangle-xmark" style="color: #ff0000"></i>
+          <p>Title</p>
+          <input id="title" type="text" />
+          <p>Description</p>
+          <textarea id="description"></textarea>
+          <p>Due Date</p>
+          <input id="date" type="date" />
+          <button id="saveBtn">Save</button>
+        </form>
+      </div>
+      <!--Modal ends here  -->
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
